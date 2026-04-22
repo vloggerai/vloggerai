@@ -1,72 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VLOG.AI - Viral AI Meme Coin</title>
-  <link rel="stylesheet" href="style.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VLOG.AI</title>
+
+<style>
+:root {
+  --primary: #8a2be2;
+  --secondary: #ff00cc;
+  --bg-dark: #0a0a0f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--bg-dark);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('assets/banner.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  animation: fadeUp 1.2s ease;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* SECTION */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+/* TOKENOMICS */
+.tokenomics {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.card {
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* ROADMAP */
+.roadmap {
+  display: grid;
+  gap: 20px;
+}
+
+.roadmap .step {
+  background: #111;
+  padding: 20px;
+  border-left: 4px solid var(--primary);
+  text-align: left;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  opacity: 0.6;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* MOBILE FIRST → DESKTOP */
+@media(min-width:768px){
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .tokenomics {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .roadmap {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+</style>
 </head>
 
 <body>
 
-<!-- 🎥 VIDEO BACKGROUND -->
-<video autoplay muted loop id="bg-video">
-  <source src="assets/hero.mp4" type="video/mp4">
-</video>
-
-<!-- HERO SECTION -->
-<header class="hero">
-  <h1 class="glow">VLOG.AI</h1>
-  <p>The AI Meme Coin for Viral Content Economy</p>
-
-  <div id="countdown"></div>
-
-  <div class="buttons">
-    <button onclick="connectWallet()" class="btn">🪙 Connect Wallet</button>
-    <a href="#presale" class="btn outline">Join Presale</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>🚀 VLOG.AI</h1>
+    <p>Create • Share • Earn</p>
+    <a href="#" class="btn">💰 Buy Token</a>
   </div>
-</header>
+</section>
 
-<!-- FEATURES -->
+<!-- ABOUT -->
 <section class="section">
-  <h2>🔥 Ecosystem</h2>
-
-  <div class="grid">
-    <div class="card">🎥 AI Vlog Generator</div>
-    <div class="card">🔥 Meme-to-Earn System</div>
-    <div class="card">🧠 AI Influencers</div>
-    <div class="card">💰 Viral Reward Engine</div>
-  </div>
+  <h2>🤖 AI-Powered Viral Economy</h2>
+  <p>
+    VLOG.AI combines AI-generated content, meme culture, and blockchain rewards.
+    Earn tokens from viral videos, engagement, and creativity.
+  </p>
 </section>
 
-<!-- PRESALE -->
-<section id="presale" class="section dark">
-  <h2>⏳ Presale Live Soon</h2>
-  <p>Early holders get maximum viral rewards & token bonuses.</p>
-
-  <div class="presale-box">
-    <p>Soft Cap: 500 ETH</p>
-    <p>Hard Cap: 2000 ETH</p>
-  </div>
-</section>
-
-<!-- MARKETING FLOW -->
+<!-- TOKENOMICS -->
 <section class="section">
-  <h2>🚀 How It Works</h2>
-
-  <div class="grid">
-    <div class="card">1. Create AI content</div>
-    <div class="card">2. Go viral on chain</div>
-    <div class="card">3. Earn $VLOG tokens</div>
-    <div class="card">4. Reinvest & scale</div>
+  <h2>🪙 Tokenomics</h2>
+  <div class="tokenomics">
+    <div class="card">40% Community Rewards</div>
+    <div class="card">20% Liquidity</div>
+    <div class="card">15% Development</div>
+    <div class="card">15% Marketing</div>
+    <div class="card">10% Team (Locked)</div>
   </div>
 </section>
 
+<!-- ROADMAP -->
+<section class="section">
+  <h2>🛣️ Roadmap</h2>
+  <div class="roadmap">
+    <div class="step">
+      <h3>Phase 1</h3>
+      <p>Token Launch + Website</p>
+    </div>
+    <div class="step">
+      <h3>Phase 2</h3>
+      <p>AI Vlog Generator Beta</p>
+    </div>
+    <div class="step">
+      <h3>Phase 3</h3>
+      <p>Viral Growth + Influencers</p>
+    </div>
+    <div class="step">
+      <h3>Phase 4</h3>
+      <p>DAO + Marketplace</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <h2>🔥 Join the Viral Economy</h2>
+  <a href="#" class="btn">Buy VLOG Token</a>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 VLOG.AI — Powered by AI + Blockchain</p>
+  © 2026 VLOG.AI — Meme Coin Powered by AI
 </footer>
 
-<script src="app.js"></script>
 </body>
 </html>
-
