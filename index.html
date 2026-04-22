@@ -2,82 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VLOG.AI - AI Meme Coin</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VLOG.AI - Viral AI Meme Coin</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
 
-  <!-- HERO SECTION -->
-  <header class="hero">
-    <h1>VLOG.AI</h1>
-    <p>The First AI-Powered Meme Coin for Viral Content Creation</p>
+<!-- 🎥 VIDEO BACKGROUND -->
+<video autoplay muted loop id="bg-video">
+  <source src="assets/hero.mp4" type="video/mp4">
+</video>
 
-    <div class="buttons">
-      <a href="#about" class="btn">Explore</a>
-      <a href="#tokenomics" class="btn outline">Tokenomics</a>
-    </div>
-  </header>
+<!-- HERO SECTION -->
+<header class="hero">
+  <h1 class="glow">VLOG.AI</h1>
+  <p>The AI Meme Coin for Viral Content Economy</p>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <h2>What is VLOG.AI?</h2>
-    <p>
-      VLOG.AI is a decentralized AI-driven meme coin that rewards users for creating,
-      sharing, and engaging with viral AI-generated vlog content.
-      It merges blockchain incentives with next-generation AI media creation.
-    </p>
-  </section>
+  <div id="countdown"></div>
 
-  <!-- FEATURES -->
-  <section class="section dark">
-    <h2>Core Features</h2>
+  <div class="buttons">
+    <button onclick="connectWallet()" class="btn">🪙 Connect Wallet</button>
+    <a href="#presale" class="btn outline">Join Presale</a>
+  </div>
+</header>
 
-    <div class="grid">
-      <div class="card">🎥 AI Vlog Generator</div>
-      <div class="card">🔥 Meme-to-Earn System</div>
-      <div class="card">🧠 AI Influencers</div>
-      <div class="card">💰 Viral Reward Engine</div>
-    </div>
-  </section>
+<!-- FEATURES -->
+<section class="section">
+  <h2>🔥 Ecosystem</h2>
 
-  <!-- TOKENOMICS -->
-  <section id="tokenomics" class="section">
-    <h2>Tokenomics</h2>
+  <div class="grid">
+    <div class="card">🎥 AI Vlog Generator</div>
+    <div class="card">🔥 Meme-to-Earn System</div>
+    <div class="card">🧠 AI Influencers</div>
+    <div class="card">💰 Viral Reward Engine</div>
+  </div>
+</section>
 
-    <ul class="token-list">
-      <li>Community Rewards — 40%</li>
-      <li>Liquidity Pool — 20%</li>
-      <li>Development — 15%</li>
-      <li>Marketing — 15%</li>
-      <li>Team (Locked) — 10%</li>
-    </ul>
-  </section>
+<!-- PRESALE -->
+<section id="presale" class="section dark">
+  <h2>⏳ Presale Live Soon</h2>
+  <p>Early holders get maximum viral rewards & token bonuses.</p>
 
-  <!-- ROADMAP -->
-  <section class="section dark">
-    <h2>Roadmap</h2>
+  <div class="presale-box">
+    <p>Soft Cap: 500 ETH</p>
+    <p>Hard Cap: 2000 ETH</p>
+  </div>
+</section>
 
-    <div class="grid">
-      <div class="card">Phase 1: Launch Token</div>
-      <div class="card">Phase 2: AI Tools Beta</div>
-      <div class="card">Phase 3: Viral Expansion</div>
-      <div class="card">Phase 4: Full Ecosystem</div>
-    </div>
-  </section>
+<!-- MARKETING FLOW -->
+<section class="section">
+  <h2>🚀 How It Works</h2>
 
-  <!-- CTA -->
-  <section class="cta">
-    <h2>Join the Viral AI Economy</h2>
-    <p>Be early. Be viral. Be rewarded.</p>
-    <a href="#" class="btn">Buy $VLOG (Coming Soon)</a>
-  </section>
+  <div class="grid">
+    <div class="card">1. Create AI content</div>
+    <div class="card">2. Go viral on chain</div>
+    <div class="card">3. Earn $VLOG tokens</div>
+    <div class="card">4. Reinvest & scale</div>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 VLOG.AI — Meme Coin Powered by AI</p>
-  </footer>
+<footer>
+  <p>© 2026 VLOG.AI — Powered by AI + Blockchain</p>
+</footer>
 
+<script src="app.js"></script>
 </body>
 </html>
